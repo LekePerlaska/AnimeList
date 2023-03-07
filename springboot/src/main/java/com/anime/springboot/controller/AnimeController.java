@@ -48,7 +48,7 @@ public class AnimeController {
 
     @PutMapping("{id}")
     public ResponseEntity<Anime> updateAnime(@PathVariable("id") int id, @RequestBody Anime anime) {
-        return new ResponseEntity<Anime>(animeService.ubdateAnime(anime, id), HttpStatus.OK);
+        return new ResponseEntity<Anime>(animeService.updateAnime(anime, id), HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")

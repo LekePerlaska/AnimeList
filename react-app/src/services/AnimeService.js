@@ -9,8 +9,14 @@ class AnimeService {
     getWatchedAnimes() {
         return axios.get(ANIME_API_BASE_URL + "/watched");
     }
-    get500Anime() {
+    getShortListAnime() {
         return axios.get(ANIME_API_BASE_URL + "/500");
+    }
+    updateAnime(anime, id) {
+        if (!anime && !anime.id) {
+            return;
+        }
+        return axios.put(ANIME_API_BASE_URL + "/" + id, anime);
     }
 }
 

@@ -8,7 +8,7 @@ public interface AnimeService {
     Anime saveAnime(Anime anime);
     List<Anime> getAllAnime();
     Anime getAnimeByID(int id);
-    Anime ubdateAnime(Anime anime, int id);
+    Anime updateAnime(Anime anime, int id);
     void deleteAnime(int id);
     List<Anime> watchedAnime(boolean watched);
     Anime[] get500Anime();

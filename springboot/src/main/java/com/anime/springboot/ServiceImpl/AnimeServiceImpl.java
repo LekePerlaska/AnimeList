@@ -39,7 +39,7 @@ public class AnimeServiceImpl implements AnimeService {
     }
 
     @Override
-    public Anime ubdateAnime(Anime anime, int id) {
+    public Anime updateAnime(Anime anime, int id) {
         Anime existingAnime = animeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Anime", "ID", id));
 
         existingAnime.setTitle(anime.getTitle());
@@ -71,7 +71,7 @@ public class AnimeServiceImpl implements AnimeService {
 
     @Override
     public Anime[] get500Anime() {
-        Anime[] anime500 = new Anime[500];
+        Anime[] anime500 = new Anime[200];
         List<Anime> all = animeRepository.findAll();
         for(int i=0; i<anime500.length; i++) {
             anime500[i] = (all.get(i));
